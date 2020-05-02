@@ -27,6 +27,9 @@ interface Props {
 const PostView: React.FC<Props> = ({ post }) => {
   return (
     <Wrapper>
+      <PostHeader user={post.postedByUser} />
+      <PostImage imageUrl={post.imageUrl} caption={post.description} />
+      <PostCaption post={post} />
     </Wrapper>
   );
 };
